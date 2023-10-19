@@ -15,11 +15,8 @@ const App = () => {
   
   return (
   <>
-    <div className="app" data-theme={theme}>
     <Navbar data-theme={theme}/>
     <Saranda data-theme={theme}/>
-    <div className="hero">Do More Drugs</div>
-    </div>
   </>
   )
 }
