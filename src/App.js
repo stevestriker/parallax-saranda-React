@@ -1,7 +1,7 @@
 import React from 'react'
 import useLocalStorage from 'use-local-storage'
 import Navbar from './Components/Navbar'
-import moon from './imgs/moon.png'
+import Saranda from './Components/Saranda'
 import './App.css'
 
 const App = () => {
@@ -17,6 +17,7 @@ const App = () => {
   <>
     <div className="app" data-theme={theme}>
     <Navbar data-theme={theme}/>
+    <Saranda data-theme={theme}/>
     <div className="hero">Do More Drugs</div>
     </div>
   </>

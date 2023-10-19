@@ -2,14 +2,14 @@ import React, {useState} from 'react'
 import useLocalStorage from 'use-local-storage'
 import {Link, NavLink} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
-import woman1 from '../imgs/woman1.png'
-import woman2 from '../imgs/woman2.png'
-import woman3 from '../imgs/woman3.png'
-import woman4 from '../imgs/woman4.png'
-import woman5 from '../imgs/woman5.png'
-import sun from '../imgs/sun.png'
-import moon from '../imgs/moon.png'
-import striker from '../imgs/striker.png'
+import woman1 from '../Imgs/woman1.png'
+import woman2 from '../Imgs/woman2.png'
+import woman3 from '../Imgs/woman3.png'
+import woman4 from '../Imgs/woman4.png'
+import woman5 from '../Imgs/woman5.png'
+import sun from '../Imgs/sun.png'
+import moon from '../Imgs/moon.png'
+import striker from '../Imgs/striker.png'
 import './Navbar.css'   
 
 const Navbar = () => {
@@ -30,7 +30,7 @@ return (
     <nav className="navbar" data-theme={theme}>
         <div className="navbar-container">
             <img src={striker} className='striker-logo' onClick={closeMobileMenu}></img>
-
+            <div className="icons-nav"> 
             <span className='icons'>
             <li>
             <img src={woman2} className='woman2'></img>
@@ -52,6 +52,7 @@ return (
             <div onClick={switchTheme} className="theme-switch">
                 <img src={moon} className='dark-moon' id='toggle'>
                 </img>
+            </div>
             </div>
 
             <div className="menu-icon" onClick={handleClick}>
