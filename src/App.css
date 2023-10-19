@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+*,
+::before,
+:after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: turquoise;
+  font-family: Goldman, cursive;
+
+  /* Theme Colors */
+
+  --primary-color: rgba(255, 255, 255, 0.439);
+  --secondary-color: rgba(21, 27, 203, 0.852);
+  --backdrop: rgb(245, 226, 81, .4);
+  --background: url(imgs/Sarande-day.png) no-repeat center center fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+[data-theme='dark'] {
+  --primary-color: turquoise;
+  --secondary-color: turquoise;
+  --backdrop: rgba(255, 255, 255, 0.2);
+  --background: url(imgs/Saranda-Night.png) no-repeat center center fixed;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-items: center;
+  align-items: center;
+  background: var(--background);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  animation: fade-down 1.4s;
 }
 
-.App-link {
-  color: #61dafb;
+#toggle {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.icons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: 3px solid var(--primary-color);
+  border-radius: 100px;
+}
+
+.hero {
+  color: var(--primary-color);
+  font-family: Goldman, cursive;
+  font-size: 3.7rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-130px) scale(.5);
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
   }
 }

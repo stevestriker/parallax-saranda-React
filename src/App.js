@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import useLocalStorage from 'use-local-storage'
+import Navbar from './Components/Navbar'
+import moon from './imgs/moon.png'
+import './App.css'
 
-function App() {
+const App = () => {
+
+  const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
+
+  const switchTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme)
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <>
+    <div className="app" data-theme={theme}>
+    <Navbar data-theme={theme}/>
+    <div className="hero">Do More Drugs</div>
     </div>
-  );
+  </>
+  )
 }
 
-export default App;
+export default App
+
+    // {/* <header data-theme={theme}>
+    //   <nav>
+    //     <div onClick={switchTheme} className="theme-switch">
+    //       <img src={moon} className='dark-moon' id='toggle'>
+    //       </img>
+    //     </div>
+    //   </nav>
+    // </header> */}
