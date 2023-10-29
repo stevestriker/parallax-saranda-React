@@ -23,7 +23,7 @@ const Saranda = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      tl.current = gsap.timeline({ defaults: { duration: .10, ease: "power2.out"} });
+      tl.current = gsap.timeline({ defaults: { duration: .2, ease: "power2.out"} });
 
       tl.current.from('#B1', {yPercent:100})
                 .from('#B2', {yPercent:100})
@@ -33,25 +33,7 @@ const Saranda = () => {
                 .from('#B6', {yPercent:-100})
                 .from('#Sky', {yPercent:-100, duration:.45, ease:'bounce'})
                 .from('#Sea', {opacity: 0, duration:6}, .15, "seaFadeIn")
-      
-        // gsap.from(b1.current, {
-        //   duration:.35, yPercent:100, ease:'power4.out'
-        // })
-        // gsap.from(b2.current, {
-        //   duration:.25, yPercent:100, ease:'power4.out'
-        // })
-        // gsap.from(b3.current, {
-        //   duration:.3, yPercent:100, ease:'power4.out'
-        // })
-        // gsap.from(b4.current, {
-        //   duration:.53, yPercent:-100, ease:'power4.out'
-        // })
-        // gsap.from(b5.current, {
-        //   duration:.73, yPercent:-100, ease:'power4.out'
-        // })
-        // gsap.from(b6.current, {
-        //   duration:.93, yPercent:-100, ease:'power4.out'
-        // })
+            
 
     }, )  // <- IMPORTANT! Scopes selector text
 
@@ -75,3 +57,10 @@ const Saranda = () => {
 }
 
 export default Saranda
+
+
+{/* <script>
+    $(window).on('load', function(){
+        $('.load-wrapper').fadeOut('slow')
+    });
+</script> */}
